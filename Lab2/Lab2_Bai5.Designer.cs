@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pathBox = new System.Windows.Forms.TextBox();
-            this.browseButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.browseButton = new System.Windows.Forms.Button();
+            this.pathBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.fileListView = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,22 +52,17 @@
             this.panel1.Size = new System.Drawing.Size(1140, 72);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // backButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Path:";
-            // 
-            // pathBox
-            // 
-            this.pathBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pathBox.Location = new System.Drawing.Point(117, 17);
-            this.pathBox.Name = "pathBox";
-            this.pathBox.Size = new System.Drawing.Size(693, 31);
-            this.pathBox.TabIndex = 1;
+            this.backButton.BackColor = System.Drawing.Color.Silver;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Location = new System.Drawing.Point(992, 16);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(134, 45);
+            this.backButton.TabIndex = 3;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // browseButton
             // 
@@ -79,17 +74,24 @@
             this.browseButton.TabIndex = 2;
             this.browseButton.Text = "Browse";
             this.browseButton.UseVisualStyleBackColor = false;
+            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
-            // backButton
+            // pathBox
             // 
-            this.backButton.BackColor = System.Drawing.Color.Silver;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Location = new System.Drawing.Point(992, 16);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(134, 45);
-            this.backButton.TabIndex = 3;
-            this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = false;
+            this.pathBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pathBox.Location = new System.Drawing.Point(117, 17);
+            this.pathBox.Name = "pathBox";
+            this.pathBox.Size = new System.Drawing.Size(693, 31);
+            this.pathBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Path:";
             // 
             // fileListView
             // 
