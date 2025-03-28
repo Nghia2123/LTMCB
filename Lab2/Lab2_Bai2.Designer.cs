@@ -46,8 +46,8 @@
             // readButton
             // 
             this.readButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.readButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.readButton.FlatAppearance.BorderSize = 10;
+            this.readButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.readButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.readButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readButton.Location = new System.Drawing.Point(111, 36);
             this.readButton.Name = "readButton";
