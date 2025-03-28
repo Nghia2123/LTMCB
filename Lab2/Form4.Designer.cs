@@ -37,7 +37,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 30);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(25, 64);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 56);
             this.button1.TabIndex = 0;
@@ -47,7 +48,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(30, 224);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button2.Location = new System.Drawing.Point(30, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 61);
             this.button2.TabIndex = 1;
@@ -57,9 +59,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(35, 447);
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Location = new System.Drawing.Point(35, 428);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(199, 64);
+            this.button3.Size = new System.Drawing.Size(199, 49);
             this.button3.TabIndex = 2;
             this.button3.Text = "Hiển thị thông tin";
             this.button3.UseVisualStyleBackColor = true;

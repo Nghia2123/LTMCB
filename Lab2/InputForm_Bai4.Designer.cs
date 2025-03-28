@@ -39,6 +39,7 @@
             this.Sdt = new System.Windows.Forms.TextBox();
             this.mathScore = new System.Windows.Forms.TextBox();
             this.vanScore = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +86,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(45, 490);
+            this.label5.Location = new System.Drawing.Point(45, 453);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 33);
             this.label5.TabIndex = 4;
@@ -95,7 +96,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(45, 604);
+            this.label6.Location = new System.Drawing.Point(45, 567);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 33);
             this.label6.TabIndex = 5;
@@ -124,23 +125,35 @@
             // 
             // mathScore
             // 
-            this.mathScore.Location = new System.Drawing.Point(263, 490);
+            this.mathScore.Location = new System.Drawing.Point(263, 453);
             this.mathScore.Name = "mathScore";
             this.mathScore.Size = new System.Drawing.Size(513, 26);
             this.mathScore.TabIndex = 9;
             // 
             // vanScore
             // 
-            this.vanScore.Location = new System.Drawing.Point(263, 604);
+            this.vanScore.Location = new System.Drawing.Point(263, 567);
             this.vanScore.Name = "vanScore";
             this.vanScore.Size = new System.Drawing.Size(513, 26);
             this.vanScore.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(306, 639);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(267, 57);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Nhập thông tin";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // InputForm_Bai4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 705);
+            this.ClientSize = new System.Drawing.Size(905, 745);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.vanScore);
             this.Controls.Add(this.mathScore);
             this.Controls.Add(this.Sdt);
@@ -172,5 +185,6 @@
         private System.Windows.Forms.TextBox Sdt;
         private System.Windows.Forms.TextBox mathScore;
         private System.Windows.Forms.TextBox vanScore;
+        private System.Windows.Forms.Button button1;
     }
 }
