@@ -167,7 +167,7 @@
             // 
             this.contentTextBox.Location = new System.Drawing.Point(609, 27);
             this.contentTextBox.Name = "contentTextBox";
-            this.contentTextBox.Size = new System.Drawing.Size(882, 675);
+            this.contentTextBox.Size = new System.Drawing.Size(818, 675);
             this.contentTextBox.TabIndex = 12;
             this.contentTextBox.Text = "";
             // 
@@ -175,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1532, 740);
+            this.ClientSize = new System.Drawing.Size(1460, 734);
             this.Controls.Add(this.contentTextBox);
             this.Controls.Add(this.fileCharBox);
             this.Controls.Add(this.character);
