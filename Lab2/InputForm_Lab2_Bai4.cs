@@ -33,9 +33,9 @@ namespace Lab2
 
             try
             {
-                try
-                {
-                    using (FileStream fs = new FileStream(filePath, FileMode.CreateNew))
+                if (File.Exists(absolutePath)) {
+
+                    using (FileStream fs = new FileStream(filePath, FileMode.Append))
                     {
                         byte[] ct = Encoding.UTF8.GetBytes(info);
                         Console.WriteLine(ct);
@@ -43,9 +43,9 @@ namespace Lab2
                         MessageBox.Show($"Nhập thành công vào {absolutePath}");
                     }
                 }
-                catch
+                else
                 {
-                    using (FileStream fs = new FileStream(filePath, FileMode.Append))
+                    using (FileStream fs = new FileStream(filePath, FileMode.Create))
                     {
                         byte[] ct = Encoding.UTF8.GetBytes(info);
                         Console.WriteLine(ct);
