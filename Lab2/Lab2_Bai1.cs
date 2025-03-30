@@ -24,6 +24,14 @@ namespace Lab2
             ofd.ShowDialog();
             string filePath = ofd.FileName;
 
+            if (filePath == "") { return; }
+
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("File không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             StreamReader sr = new StreamReader(filePath); // Tự động đóng file sau khi đọc
             richTextBox1.Clear();
             richTextBox1.Text = sr.ReadToEnd();
@@ -34,6 +42,9 @@ namespace Lab2
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Text (*.txt)|*.txt";
             sfd.ShowDialog();
+
+            if (sfd.FileName == "") { return; }
+
             using (FileStream fs = new FileStream(sfd.FileName, FileMode.OpenOrCreate))
             {
                 byte[] ct = Encoding.UTF8.GetBytes(richTextBox1.Text.Trim());
