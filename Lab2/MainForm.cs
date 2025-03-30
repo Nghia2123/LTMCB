@@ -19,7 +19,7 @@ namespace Lab2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Lab2_Bai1 form1 = new Lab2_Bai1();
             form1.ShowDialog();
         }
         private void button2_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace Lab2
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            Lab2_Bai4 form4 = new Lab2_Bai4();
             form4.ShowDialog();
         }
         private void button5_Click(object sender, EventArgs e)

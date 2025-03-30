@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Lab2
 {
-    public partial class Form1 : Form
+    public partial class Lab2_Bai1 : Form
     {
-        public Form1()
+        public Lab2_Bai1()
         {
             InitializeComponent();
         }

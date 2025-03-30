@@ -12,26 +12,38 @@ using System.Windows.Forms;
 
 namespace Lab2
 {
-    public partial class Form4 : Form
+    public partial class Lab2_Bai4 : Form
     {
-        public Form4()
+        public Lab2_Bai4()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InputForm_Bai4 inputForm = new InputForm_Bai4();
+            InputForm_Lab2_Bai4 inputForm = new InputForm_Lab2_Bai4();
             inputForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
-            string fileIn = @"D:\\Nam_2\\LTMCB\\test\\input.txt";
-            string fileOut = @"D:\\Nam_2\\LTMCB\\test\\output.xlsx";
+            string fileIn = @"../input.txt";
+            string fileOut = @"../output.xlsx";
+            string absolutePath = Path.GetFullPath(fileOut);
 
-            FileStream fs = new FileStream(fileIn, FileMode.Open);
+
+            FileStream fs;
+
+            try
+            {
+                fs = new FileStream(fileIn, FileMode.Open);
+            }
+            catch
+            {
+                MessageBox.Show("File không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            };
 
             using (StreamReader sr = new StreamReader(fs, Encoding.UTF8))
             {
@@ -89,7 +101,8 @@ namespace Lab2
                 }
             }
 
-            MessageBox.Show("Ghi file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ghi file Excel thành công! " +
+                $"File được lưu tại {absolutePath}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void AddColumnIfNotExists(string columnName, string headerText)
         {
@@ -112,8 +125,17 @@ namespace Lab2
             AddColumnIfNotExists("van", "Văn");
             AddColumnIfNotExists("tb", "Trung Bình");
 
-            string fileIn = @"D:\\Nam_2\\LTMCB\\test\\input.txt";
-            FileStream fs = new FileStream(fileIn, FileMode.Open);
+            string fileIn = @"../input.txt";
+            FileStream fs;
+            try
+            {
+                fs = new FileStream(fileIn, FileMode.Open);
+            }
+            catch
+            {
+                MessageBox.Show("File không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            };
 
             using (StreamReader sr = new StreamReader(fs, Encoding.UTF8))
             {

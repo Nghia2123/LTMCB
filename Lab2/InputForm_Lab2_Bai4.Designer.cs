@@ -1,6 +1,6 @@
 ﻿namespace Lab2
 {
-    partial class InputForm_Bai4
+    partial class InputForm_Lab2_Bai4
     {
         /// <summary>
         /// Required designer variable.
