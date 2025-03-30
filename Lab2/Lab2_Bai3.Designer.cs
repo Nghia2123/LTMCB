@@ -104,7 +104,7 @@
             this.Controls.Add(this.writeButton);
             this.Name = "Lab2_Bai3";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Text = "Form3";
+            this.Text = "Bai3";
             this.ResumeLayout(false);
 
         }

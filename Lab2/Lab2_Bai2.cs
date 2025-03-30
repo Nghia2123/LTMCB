@@ -36,6 +36,8 @@ namespace Lab2
             fileNameBox.Text = name;
             fileUrlBox.Text = path;
 
+            if (path == "") { return; }
+
             FileStream data = new FileStream(path, FileMode.Open);
             StreamReader reader = new StreamReader(data);
             var content = reader.ReadToEnd();

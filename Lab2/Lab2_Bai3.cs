@@ -105,6 +105,10 @@ namespace Lab2
 
             try
             {
+                if (fileName == "")
+                {
+                    return;
+                }
                 inputRichText.Text = File.ReadAllText(fileName).Replace("\r", "");
                 bieuThucs = inputRichText.Text.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
