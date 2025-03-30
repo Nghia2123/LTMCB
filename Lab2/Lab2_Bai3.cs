@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OfficeOpenXml.ConditionalFormatting.Contracts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,11 @@ namespace Lab2
             int countPhep = 0;
             foreach (char c in bieuThuc)
             {
+                if (Char.IsLetter(c) || Char.IsPunctuation(c) || Char.IsSymbol(c))
+                {
+                    MessageBox.Show("Input chứa biểu thức không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
                 if (c == '+' || c == '-' || c == '*' || c == '/')
                 {
                     countPhep++;
