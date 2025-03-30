@@ -47,7 +47,7 @@ namespace Lab2
 
             using (FileStream fs = new FileStream(sfd.FileName, FileMode.OpenOrCreate))
             {
-                byte[] ct = Encoding.UTF8.GetBytes(richTextBox1.Text.Trim());
+                byte[] ct = Encoding.UTF8.GetBytes(richTextBox1.Text.ToUpper().Trim());
                 fs.Write(ct, 0, ct.Length);
             }                
            
