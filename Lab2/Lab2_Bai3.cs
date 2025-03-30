@@ -90,6 +90,14 @@ namespace Lab2
                     }
                 }
             }
+
+            // Hien thi ket qua o outputRichText
+            outputRichText.Text = "";
+            for (int i = 0; i < ketQua.Length; i++)
+            {
+                outputRichText.Text += bieuThucs[i] + " = " + ketQua[i] + "\n";
+            }
+
             MessageBox.Show("Tính toán thành công");
         }
 
@@ -124,11 +132,20 @@ namespace Lab2
         {
             try
             {
-                outputRichText.Text = "";
-                for (int i = 0; i < ketQua.Length; i++)
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "Text files (*.txt)|*.txt";
+                string fileName = "";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    outputRichText.Text += bieuThucs[i] + " = " + ketQua[i] + "\n";
+                    fileName = saveFileDialog1.FileName;
                 }
+                if (fileName == "")
+                {
+                    return;
+                }
+                File.WriteAllText(fileName, outputRichText.Text);
+                MessageBox.Show("Ghi file thành công");
+
             }
             catch (Exception)
             {
