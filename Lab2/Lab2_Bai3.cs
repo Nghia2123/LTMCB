@@ -26,7 +26,7 @@ namespace Lab2
             int countPhep = 0;
             foreach (char c in bieuThuc)
             {
-                if (Char.IsLetter(c) || Char.IsPunctuation(c) || Char.IsSymbol(c))
+                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
                 {
                     MessageBox.Show("Input chứa biểu thức không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
@@ -111,6 +111,9 @@ namespace Lab2
         {
             openFileDialog1.Filter = "Text files (*.txt)|*.txt";
             string fileName = "";
+
+            bieuThucs = null;
+            ketQua = null;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
