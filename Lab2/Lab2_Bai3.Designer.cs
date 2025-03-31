@@ -62,16 +62,22 @@
             // 
             // inputRichText
             // 
+            this.inputRichText.BackColor = System.Drawing.Color.White;
+            this.inputRichText.ForeColor = System.Drawing.SystemColors.WindowText;
             this.inputRichText.Location = new System.Drawing.Point(29, 149);
             this.inputRichText.Name = "inputRichText";
+            this.inputRichText.ReadOnly = true;
             this.inputRichText.Size = new System.Drawing.Size(462, 554);
             this.inputRichText.TabIndex = 3;
             this.inputRichText.Text = "";
             // 
             // outputRichText
             // 
+            this.outputRichText.BackColor = System.Drawing.Color.White;
+            this.outputRichText.ForeColor = System.Drawing.SystemColors.WindowText;
             this.outputRichText.Location = new System.Drawing.Point(558, 149);
             this.outputRichText.Name = "outputRichText";
+            this.outputRichText.ReadOnly = true;
             this.outputRichText.Size = new System.Drawing.Size(462, 554);
             this.outputRichText.TabIndex = 4;
             this.outputRichText.Text = "";

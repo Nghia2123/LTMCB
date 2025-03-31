@@ -35,9 +35,10 @@
             // 
             // readButton
             // 
-            this.readButton.Location = new System.Drawing.Point(203, 509);
+            this.readButton.Location = new System.Drawing.Point(271, 636);
+            this.readButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.readButton.Name = "readButton";
-            this.readButton.Size = new System.Drawing.Size(171, 69);
+            this.readButton.Size = new System.Drawing.Size(228, 86);
             this.readButton.TabIndex = 1;
             this.readButton.Text = "Đọc file";
             this.readButton.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // writeButton
             // 
-            this.writeButton.Location = new System.Drawing.Point(523, 509);
+            this.writeButton.Location = new System.Drawing.Point(697, 636);
+            this.writeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.writeButton.Name = "writeButton";
-            this.writeButton.Size = new System.Drawing.Size(171, 69);
+            this.writeButton.Size = new System.Drawing.Size(228, 86);
             this.writeButton.TabIndex = 2;
             this.writeButton.Text = "Ghi file";
             this.writeButton.UseVisualStyleBackColor = true;
@@ -55,21 +57,25 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(35, 27);
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(47, 34);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(801, 462);
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(1067, 576);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
-            // Form1
+            // Lab2_Bai1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 590);
+            this.ClientSize = new System.Drawing.Size(1164, 738);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.writeButton);
             this.Controls.Add(this.readButton);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Lab2_Bai1";
             this.Text = "Read&Write";
             this.ResumeLayout(false);
 

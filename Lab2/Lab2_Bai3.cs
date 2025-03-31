@@ -26,20 +26,22 @@ namespace Lab2
             int countPhep = 0;
             foreach (char c in bieuThuc)
             {
-                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-                {
-                    MessageBox.Show("Input chứa biểu thức không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
+
                 if (c == '+' || c == '-' || c == '*' || c == '/')
                 {
                     countPhep++;
+                    continue;
                 }
+
+                if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || Char.IsPunctuation(c) || Char.IsSymbol(c))
+                {
+                    return false;
+                }
+                
             }
 
             if (countPhep == 0 || countPhep > 1)
             {
-                MessageBox.Show("Input chứa biểu thức không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -50,6 +52,7 @@ namespace Lab2
         {
             char[] phepTinh = { '+', '-', '*', '/' };
             ketQua = new string[bieuThucs.Length];
+            bool[] bieuThucLoi = new bool[bieuThucs.Length];
 
             for (int i = 0; i < bieuThucs.Length; i++)
             {
@@ -62,7 +65,8 @@ namespace Lab2
 
                 if (!isBieuThuc(bieuThucs[i]))
                 {
-                    return;
+                    bieuThucLoi[i] = true;
+                    continue;
                 }
 
                 foreach (char op in phepTinh)
@@ -89,9 +93,9 @@ namespace Lab2
                             break;
                         }
                     }
-                    catch (Exception) 
+                    catch (Exception err) 
                     {  
-                        MessageBox.Show("Input chứa biểu thức không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lỗi: " + err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -99,12 +103,26 @@ namespace Lab2
 
             // Hien thi ket qua o outputRichText
             outputRichText.Text = "";
+            string loi = "Biểu thức ";
             for (int i = 0; i < ketQua.Length; i++)
             {
+                if (bieuThucLoi[i])
+                {
+                    loi += (i + 1) + ", ";
+                    continue;
+                }
+
                 outputRichText.Text += bieuThucs[i] + " = " + ketQua[i] + "\n";
             }
 
-            MessageBox.Show("Tính toán thành công");
+            if (bieuThucLoi.Contains(true))
+            {   
+                loi = loi.Substring(0, loi.Length - 2);
+                loi += " không hợp lệ";
+                MessageBox.Show(loi, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Tính toán thành công");
         }
 
         private void readButton_Click(object sender, EventArgs e)

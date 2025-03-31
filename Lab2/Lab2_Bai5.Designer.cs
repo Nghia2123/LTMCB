@@ -78,9 +78,12 @@
             // 
             // pathBox
             // 
+            this.pathBox.BackColor = System.Drawing.Color.White;
             this.pathBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pathBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.pathBox.Location = new System.Drawing.Point(117, 17);
             this.pathBox.Name = "pathBox";
+            this.pathBox.ReadOnly = true;
             this.pathBox.Size = new System.Drawing.Size(693, 31);
             this.pathBox.TabIndex = 1;
             // 

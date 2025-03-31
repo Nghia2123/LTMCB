@@ -165,8 +165,10 @@
             // 
             // contentTextBox
             // 
+            this.contentTextBox.BackColor = System.Drawing.Color.White;
             this.contentTextBox.Location = new System.Drawing.Point(609, 27);
             this.contentTextBox.Name = "contentTextBox";
+            this.contentTextBox.ReadOnly = true;
             this.contentTextBox.Size = new System.Drawing.Size(818, 675);
             this.contentTextBox.TabIndex = 12;
             this.contentTextBox.Text = "";
