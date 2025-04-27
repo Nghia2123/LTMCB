@@ -41,7 +41,7 @@
             // 
             this.URLBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.URLBox.Location = new System.Drawing.Point(158, 15);
-            this.URLBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.URLBox.Margin = new System.Windows.Forms.Padding(2);
             this.URLBox.Name = "URLBox";
             this.URLBox.Size = new System.Drawing.Size(450, 26);
             this.URLBox.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.browseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.browseButton.Location = new System.Drawing.Point(612, 14);
-            this.browseButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.browseButton.Margin = new System.Windows.Forms.Padding(2);
             this.browseButton.Name = "browseButton";
             this.browseButton.Size = new System.Drawing.Size(68, 26);
             this.browseButton.TabIndex = 3;
@@ -77,10 +77,10 @@
             this.webView21.BackColor = System.Drawing.Color.White;
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(0, 122);
-            this.webView21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webView21.Location = new System.Drawing.Point(11, 92);
+            this.webView21.Margin = new System.Windows.Forms.Padding(2);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(944, 435);
+            this.webView21.Size = new System.Drawing.Size(711, 435);
             this.webView21.TabIndex = 4;
             this.webView21.ZoomFactor = 1D;
             // 
@@ -89,7 +89,7 @@
             this.userAgentComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userAgentComboBox.FormattingEnabled = true;
             this.userAgentComboBox.Location = new System.Drawing.Point(158, 60);
-            this.userAgentComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userAgentComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.userAgentComboBox.Name = "userAgentComboBox";
             this.userAgentComboBox.Size = new System.Drawing.Size(450, 28);
             this.userAgentComboBox.TabIndex = 5;
@@ -117,7 +117,7 @@
             this.Controls.Add(this.browseButton);
             this.Controls.Add(this.URLLabel);
             this.Controls.Add(this.URLBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Lab4_Bai2";
             this.Text = "Lab4_Bai2";
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
