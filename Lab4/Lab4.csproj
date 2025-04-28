@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\CefSharp.Common.135.0.170\build\CefSharp.Common.props" Condition="Exists('packages\CefSharp.Common.135.0.170\build\CefSharp.Common.props')" />
   <Import Project="packages\chromiumembeddedframework.runtime.win-x86.135.0.17\build\chromiumembeddedframework.runtime.win-x86.props" Condition="Exists('packages\chromiumembeddedframework.runtime.win-x86.135.0.17\build\chromiumembeddedframework.runtime.win-x86.props')" />
@@ -47,6 +47,12 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.4\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.12.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.12.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.4\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3179.45, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
@@ -57,6 +63,12 @@
       <HintPath>packages\Microsoft.Web.WebView2.1.0.3179.45\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -129,11 +141,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lab4_Bai1.resx">
+      <DependentUpon>Lab4_Bai1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab4_Bai2.resx">
       <DependentUpon>Lab4_Bai2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab4_Bai3.resx">
       <DependentUpon>Lab4_Bai3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab4_Bai4.resx">
+      <DependentUpon>Lab4_Bai4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
