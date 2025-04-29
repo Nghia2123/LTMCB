@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.getUserButton = new System.Windows.Forms.Button();
             this.getPhotoButton = new System.Windows.Forms.Button();
+            this.productAPIButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.productAPIButton);
             this.panel1.Controls.Add(this.getUserButton);
             this.panel1.Controls.Add(this.getPhotoButton);
             this.panel1.Controls.Add(this.getCommentButton);
@@ -95,6 +97,17 @@
             this.getPhotoButton.UseVisualStyleBackColor = true;
             this.getPhotoButton.Click += new System.EventHandler(this.getPhotoButton_Click);
             // 
+            // productAPIButton
+            // 
+            this.productAPIButton.Location = new System.Drawing.Point(619, 4);
+            this.productAPIButton.Margin = new System.Windows.Forms.Padding(4);
+            this.productAPIButton.Name = "productAPIButton";
+            this.productAPIButton.Size = new System.Drawing.Size(210, 75);
+            this.productAPIButton.TabIndex = 3;
+            this.productAPIButton.Text = "Get My Product API";
+            this.productAPIButton.UseVisualStyleBackColor = true;
+            this.productAPIButton.Click += new System.EventHandler(this.productAPIButton_Click);
+            // 
             // Lab4_Bai3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -119,5 +132,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button getUserButton;
         private System.Windows.Forms.Button getPhotoButton;
+        private System.Windows.Forms.Button productAPIButton;
     }
 }
