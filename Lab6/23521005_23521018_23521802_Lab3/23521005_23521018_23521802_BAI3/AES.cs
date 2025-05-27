@@ -10,8 +10,6 @@ using System.Text;
 
 namespace BAI3
 {
-
-
     public static class AesEncryption
     {
         public static byte[] Encrypt(string plainText, byte[] key, byte[] iv)

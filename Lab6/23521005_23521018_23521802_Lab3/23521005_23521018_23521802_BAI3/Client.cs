@@ -18,6 +18,8 @@ namespace BAI3
         {
             InitializeComponent();
         }
+        byte[] key = Encoding.UTF8.GetBytes("1a2b3c4d5e6f7g8h");
+        byte[] iv = Encoding.UTF8.GetBytes("a1b2c3d4e5f6g7h8");
 
         TcpClient tcpClient;
         IPEndPoint ep;
@@ -57,9 +59,14 @@ namespace BAI3
                 return;
             }
             NetworkStream ns = tcpClient.GetStream();
-            Byte[] sendBytes = System.Text.Encoding.UTF8.GetBytes(Message.Text + '\n');
+
+            Byte[] sendBytes = AesEncryption.Encrypt(Message.Text+'\n', key, iv);
+
+            //Byte[] sendBytes = System.Text.Encoding.UTF8.GetBytes(Message.Text + '\n');
+            
             ns.Write(sendBytes, 0, sendBytes.Length);
             View.Text += Message.Text + '\n';
+            
             Message.Text = "";
         }
     }
